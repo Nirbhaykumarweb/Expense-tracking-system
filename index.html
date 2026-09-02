@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="Career Pilot helps students prepare company-wise, practice questions, and improve placement readiness through AI-powered mock interviews." />
+    <title>Career Pilot | AI Placement Preparation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand brand-mark" href="index.html">
+                <span class="brand-icon"><i class="bi bi-rocket-takeoff"></i></span>
+                CAREER PILOT
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-nav-toggle="true" aria-label="Open navigation">
+                <i class="bi bi-list fs-3"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="companies.html">Companies</a></li>
+                    <li class="nav-item"><a class="nav-link" href="practice.html">Practice</a></li>
+                    <li class="nav-item"><a class="nav-link" href="interviews.html">Interviews</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                </ul>
+                <div class="d-flex align-items-center gap-2">
+                    <a href="login.html" class="btn btn-outline-primary">Login</a>
+                    <a href="register.html" class="btn btn-primary">Get Started</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="mobileNav" aria-labelledby="mobileNavLabel">
+        <div class="offcanvas-header">
+            <h5 id="mobileNavLabel">Career Pilot</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="d-grid gap-2">
+                <a href="index.html" class="btn btn-soft text-start">Home</a>
+                <a href="companies.html" class="btn btn-soft text-start">Companies</a>
+                <a href="practice.html" class="btn btn-soft text-start">Practice</a>
+                <a href="interviews.html" class="btn btn-soft text-start">Interviews</a>
+                <a href="pricing.html" class="btn btn-soft text-start">Pricing</a>
+                <a href="about.html" class="btn btn-soft text-start">About</a>
+                <a href="login.html" class="btn btn-outline-primary">Login</a>
+                <a href="register.html" class="btn btn-primary">Get Started</a>
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <section class="hero-section">
+            <div class="container">
+                <div class="row align-items-center g-5">
+                    <div class="col-lg-6">
+                        <div class="hero-tag"><i class="bi bi-stars"></i> AI-powered placement prep</div>
+                        <h1 class="hero-title mt-4">Ace Your Next Placement Interview With AI</h1>
+                        <p class="lead mt-4 text-muted">Prepare company-wise, practice the right questions, experience
+                            realistic AI interviews, and improve your placement readiness.</p>
+                        <div class="d-flex flex-wrap gap-3 mt-4">
+                            <a href="register.html" class="btn btn-primary btn-lg">Start Preparing</a>
+                            <a href="companies.html" class="btn btn-outline-primary btn-lg">Explore Companies</a>
+                        </div>
+                        <div class="d-flex flex-wrap gap-4 mt-5">
+                            <div>
+                                <strong class="fs-4">12k+</strong>
+                                <div class="text-muted">Students</div>
+                            </div>
+                            <div>
+                                <strong class="fs-4">180+</strong>
+                                <div class="text-muted">Mock interviews</div>
+                            </div>
+                            <div>
+                                <strong class="fs-4">92%</strong>
+                                <div class="text-muted">Improvement rate</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="hero-visual">
+                            <div class="dashboard-mock">
+                                <div class="mock-header">
+                                    <div class="fw-bold">Career Pilot</div>
+                                    <span class="metric-pill">78% Ready</span>
+                                </div>
+                                <div class="mock-body">
+                                    <div class="row g-3 mb-4">
+                                        <div class="col-6">
+                                            <div class="stat-bubble">
+                                                <small class="text-muted">Readiness score</small>
+                                                <strong>78%</strong>
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="stat-bubble">
+                                                <small class="text-muted">AI interviewer</small>
+                                                <strong>DSA</strong>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card border-0 bg-light mb-3">
+                                        <div class="card-body py-3">
+                                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                                <span class="fw-bold">Interview score</span>
+                                                <span class="badge badge-soft">82/100</span>
+                                            </div>
+                                            <div class="progress">
+                                                <div class="progress-bar" style="width:82%"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card border-0 bg-light mb-3">
+                                        <div class="card-body py-3">
+                                            <div class="d-flex justify-content-between align-items-center mb-2">
+                                                <span class="fw-bold">Progress</span>
+                                                <span class="text-muted">75%</span>
+                                            </div>
+                                            <div class="progress">
+                                                <div class="progress-bar" style="width:75%"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card border-0 bg-light">
+                                        <div class="card-body py-3">
+                                            <div class="fw-bold mb-2">Recommended topics</div>
+                                            <div class="d-flex flex-wrap gap-2">
+                                                <span class="badge badge-soft">DBMS</span>
+                                                <span class="badge badge-soft">SQL</span>
+                                                <span class="badge badge-soft">Operating Systems</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="section-title">Everything you need for placement readiness</h2>
+                    <p class="section-subtitle">From company preparation to AI mock interviews, Career Pilot gives
+                        students a structured route to interview confidence.</p>
+                </div>
+                <div class="row g-4">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card h-100 p-4">
+                            <div class="feature-icon mb-3"><i class="bi bi-building"></i></div>
+                            <h4 class="mb-3">Company-Wise Preparation</h4>
+                            <p class="text-muted mb-0">Explore company profiles, eligibility, roles, recruitment process
+                                and round-specific guidance.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card h-100 p-4">
+                            <div class="feature-icon mb-3"><i class="bi bi-question-circle"></i></div>
+                            <h4 class="mb-3">Smart Question Bank</h4>
+                            <p class="text-muted mb-0">Practice aptitude, coding, DSA, technical, project and HR
+                                questions with explanations.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card h-100 p-4">
+                            <div class="feature-icon mb-3"><i class="bi bi-camera-video"></i></div>
+                            <h4 class="mb-3">AI Mock Interviews</h4>
+                            <p class="text-muted mb-0">Experience realistic interviews powered by AI interviewer
+                                personas and contextual follow-ups.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card h-100 p-4">
+                            <div class="feature-icon mb-3"><i class="bi bi-arrow-repeat"></i></div>
+                            <h4 class="mb-3">Dynamic Follow-Ups</h4>
+                            <p class="text-muted mb-0">The interview adapts based on your response and previous answers,
+                                not a static script.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card h-100 p-4">
+                            <div class="feature-icon mb-3"><i class="bi bi-graph-up-arrow"></i></div>
+                            <h4 class="mb-3">AI Performance Analysis</h4>
+                            <p class="text-muted mb-0">Receive scoring, strengths, weaknesses, and detailed
+                                recommendations after every interview.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card h-100 p-4">
+                            <div class="feature-icon mb-3"><i class="bi bi-shield-check"></i></div>
+                            <h4 class="mb-3">Placement Readiness</h4>
+                            <p class="text-muted mb-0">Track your progress, identify weak areas, and improve with a
+                                personalized roadmap.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-transparent">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="section-title">How it works</h2>
+                </div>
+                <div class="timeline">
+                    <div class="timeline-step">
+                        <div class="timeline-number">01</div>
+                        <h5>Choose Company</h5>
+                    </div>
+                    <div class="timeline-step">
+                        <div class="timeline-number">02</div>
+                        <h5>Understand Selection Rounds</h5>
+                    </div>
+                    <div class="timeline-step">
+                        <div class="timeline-number">03</div>
+                        <h5>Practice Questions</h5>
+                    </div>
+                    <div class="timeline-step">
+                        <div class="timeline-number">04</div>
+                        <h5>Take AI Interview</h5>
+                    </div>
+                    <div class="timeline-step">
+                        <div class="timeline-number">05</div>
+                        <h5>Get Performance Report</h5>
+                    </div>
+                    <div class="timeline-step">
+                        <div class="timeline-number">06</div>
+                        <h5>Improve Weak Areas</h5>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="section-title">AI Interview Panel</h2>
+                    <p class="section-subtitle">A unified AI system with four interviewer personas tuned for different
+                        placement rounds.</p>
+                </div>
+                <div class="row g-4">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="card interviewer-card p-4 h-100">
+                            <div class="info-icon mb-3"><i class="bi bi-cpu"></i></div>
+                            <h4>Technical Interviewer</h4>
+                            <ul class="list-unstyled text-muted list-check mt-3">
+                                <li>OOP</li>
+                                <li>DBMS</li>
+                                <li>SQL</li>
+                                <li>Operating Systems</li>
+                                <li>Computer Networks</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="card interviewer-card p-4 h-100">
+                            <div class="info-icon mb-3"><i class="bi bi-diagram-3"></i></div>
+                            <h4>DSA Interviewer</h4>
+                            <ul class="list-unstyled text-muted list-check mt-3">
+                                <li>Algorithms</li>
+                                <li>Data Structures</li>
+                                <li>Coding</li>
+                                <li>Complexity</li>
+                                <li>Problem Solving</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="card interviewer-card p-4 h-100">
+                            <div class="info-icon mb-3"><i class="bi bi-kanban"></i></div>
+                            <h4>Project / Managerial</h4>
+                            <ul class="list-unstyled text-muted list-check mt-3">
+                                <li>Projects</li>
+                                <li>Resume</li>
+                                <li>Architecture</li>
+                                <li>Decision making</li>
+                                <li>Situational questions</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="card interviewer-card p-4 h-100">
+                            <div class="info-icon mb-3"><i class="bi bi-people"></i></div>
+                            <h4>HR Interviewer</h4>
+                            <ul class="list-unstyled text-muted list-check mt-3">
+                                <li>Communication</li>
+                                <li>Behavioral questions</li>
+                                <li>Strengths</li>
+                                <li>Weaknesses</li>
+                                <li>Career goals</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-transparent">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="section-title">Simple pricing, built for your goal</h2>
+                </div>
+                <div class="row g-4 justify-content-center">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="pricing-card p-4 h-100">
+                            <div class="badge badge-soft mb-3">FREE</div>
+                            <h3 class="display-6 fw-bold">₹0</h3>
+                            <ul class="list-unstyled list-check mt-4">
+                                <li>Aptitude practice</li>
+                                <li>Coding practice</li>
+                                <li>Technical practice</li>
+                                <li>Basic feedback</li>
+                                <li>Progress tracking</li>
+                            </ul>
+                            <button class="btn btn-outline-primary mt-4 w-100" data-bs-toggle="modal"
+                                data-bs-target="#pricingModal">Get Started</button>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="pricing-card p-4 h-100 border-primary shadow-lg position-relative">
+                            <div class="badge bg-primary mb-3">PRO</div>
+                            <h3 class="display-6 fw-bold">₹299<span class="fs-6 text-muted">/month</span></h3>
+                            <ul class="list-unstyled list-check mt-4">
+                                <li>AI mock interviews</li>
+                                <li>Four AI interviewers</li>
+                                <li>Video/voice simulation</li>
+                                <li>Dynamic follow-ups</li>
+                                <li>Detailed reports</li>
+                            </ul>
+                            <button class="btn btn-primary mt-4 w-100" data-bs-toggle="modal"
+                                data-bs-target="#pricingModal">Choose Pro</button>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="pricing-card p-4 h-100">
+                            <div class="badge badge-soft mb-3">CAREER</div>
+                            <h3 class="display-6 fw-bold">₹599<span class="fs-6 text-muted">/month</span></h3>
+                            <ul class="list-unstyled list-check mt-4">
+                                <li>Everything in Pro</li>
+                                <li>Company packs</li>
+                                <li>Advanced analytics</li>
+                                <li>Readiness score</li>
+                                <li>Personalized roadmap</li>
+                            </ul>
+                            <button class="btn btn-outline-primary mt-4 w-100" data-bs-toggle="modal"
+                                data-bs-target="#pricingModal">Go Career</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <div class="page-banner text-center">
+                    <h2 class="section-title mb-3">Your placement preparation starts here.</h2>
+                    <p class="text-muted mb-4">Build company-specific confidence, sharpen your fundamentals, and
+                        interview with clarity.</p>
+                    <a href="register.html" class="btn btn-primary btn-lg">Get Started</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="row g-4 pb-5">
+                <div class="col-lg-4 col-md-6">
+                    <a class="navbar-brand brand-mark" href="index.html">
+                        <span class="brand-icon"><i class="bi bi-rocket-takeoff"></i></span>
+                        CAREER PILOT
+                    </a>
+                    <p class="text-muted mt-3">AI-powered placement preparation platform designed to help students
+                        practice smarter and interview with confidence.</p>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h6 class="fw-bold">Platform</h6>
+                    <div class="footer-links">
+                        <a href="companies.html">Companies</a>
+                        <a href="practice.html">Practice</a>
+                        <a href="interviews.html">Interviews</a>
+                        <a href="analytics.html">Analytics</a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h6 class="fw-bold">Resources</h6>
+                    <div class="footer-links">
+                        <a href="company-details.html">Interview Experiences</a>
+                        <a href="practice.html">Question Bank</a>
+                        <a href="report.html">Preparation</a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h6 class="fw-bold">Company</h6>
+                    <div class="footer-links">
+                        <a href="about.html">About</a>
+                        <a href="contact.html">Contact</a>
+                        <a href="privacy.html">Privacy</a>
+                        <a href="terms.html">Terms</a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-top py-3 text-center text-muted small">© 2026 Career Pilot. All rights reserved.</div>
+        </div>
+    </footer>
+
+    <div class="modal fade" id="pricingModal" tabindex="-1" aria-labelledby="pricingModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="pricingModalLabel">Frontend Demo</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p class="mb-0">This is a frontend demo. Payment integration will be added later.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

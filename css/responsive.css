@@ -1,0 +1,71 @@
+@media (max-width: 767.98px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .hero-visual {
+    min-height: 360px;
+  }
+
+  .auth-card {
+    padding: 1.25rem;
+  }
+
+  .navbar .btn {
+    width: 100%;
+    margin-top: 0.6rem;
+  }
+
+  .sidebar {
+    min-height: auto;
+  }
+
+  .control-row .btn {
+    flex: 1 1 180px;
+  }
+
+  .mock-body .row > div {
+    margin-bottom: 0.8rem;
+  }
+
+  .page-banner {
+    padding: 1.25rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  section {
+    padding: 65px 0;
+  }
+
+  .brand-mark {
+    font-size: 1rem;
+  }
+
+  .hero-section {
+    padding-top: 5.5rem;
+  }
+
+  .timeline-number {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  .interview-stage {
+    min-height: 340px;
+    padding: 1rem;
+  }
+
+  .ai-bubble {
+    padding: 1rem 1rem;
+    font-size: 1.15rem;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  .d-flex.gap-2 {
+    width: 100%;
+  }
+}

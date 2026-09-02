@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Question Practice | Career Pilot</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container"><a class="navbar-brand brand-mark" href="index.html"><span class="brand-icon"><i
+                        class="bi bi-rocket-takeoff"></i></span>CAREER PILOT</a><button class="navbar-toggler border-0"
+                type="button" data-nav-toggle="true"><i class="bi bi-list fs-3"></i></button>
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="companies.html">Companies</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="practice.html">Practice</a></li>
+                    <li class="nav-item"><a class="nav-link" href="interviews.html">Interviews</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
+                </ul>
+                <div class="d-flex gap-2"><a href="login.html" class="btn btn-outline-primary">Login</a><a
+                        href="register.html" class="btn btn-primary">Get Started</a></div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="mobileNav">
+        <div class="offcanvas-header">
+            <h5>Career Pilot</h5><button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body d-grid gap-2"><a href="index.html" class="btn btn-soft text-start">Home</a><a
+                href="companies.html" class="btn btn-soft text-start">Companies</a><a href="practice.html"
+                class="btn btn-soft text-start">Practice</a><a href="interviews.html"
+                class="btn btn-soft text-start">Interviews</a><a href="pricing.html"
+                class="btn btn-soft text-start">Pricing</a><a href="login.html"
+                class="btn btn-outline-primary">Login</a><a href="register.html" class="btn btn-primary">Get Started</a>
+        </div>
+    </div>
+
+    <main class="container py-5">
+        <div class="card p-4 p-md-5">
+            <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-2">
+                <span class="badge badge-soft" id="questionMeta">Question 1 / 8</span>
+                <button class="btn btn-outline-primary" id="bookmarkBtn" data-bookmark="question-practice"><i
+                        class="bi bi-bookmark"></i> Bookmark</button>
+            </div>
+
+            <h2 class="fw-bold mb-4" id="questionText">What is normalization in DBMS?</h2>
+
+            <div class="mb-4">
+                <label for="answerInput" class="form-label">Your answer</label>
+                <textarea id="answerInput" class="form-control" rows="8"
+                    placeholder="Write your answer here..."></textarea>
+            </div>
+
+            <div class="d-flex justify-content-between align-items-center gap-2 flex-wrap">
+                <button class="btn btn-primary" id="submitAnswer">Submit Answer</button>
+                <button class="btn btn-outline-primary" id="nextQuestion">Next Question</button>
+            </div>
+
+            <div id="resultBox" class="mt-4 d-none">
+                <div class="alert alert-success">
+                    <strong>Score:</strong> <span id="scoreValue">8/10</span>
+                </div>
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <div class="card border-0 bg-light p-3 h-100">
+                            <h6 class="fw-bold">Correct / Incorrect</h6>
+                            <p id="correctnessText" class="mb-0">Correct</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card border-0 bg-light p-3 h-100">
+                            <h6 class="fw-bold">Your answer</h6>
+                            <p id="userAnswerText" class="mb-0 text-muted">Your answer appears here.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card border-0 bg-light p-3 h-100">
+                            <h6 class="fw-bold">Expected answer</h6>
+                            <p id="expectedAnswerText" class="mb-0 text-muted">Expected answer appears here.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card border-0 bg-light p-3 h-100">
+                            <h6 class="fw-bold">Explanation</h6>
+                            <p id="explanationText" class="mb-0 text-muted">Explanation appears here.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        const questions = window.careerPilotData.questions;
+        let currentIndex = 0;
+
+        const questionText = document.getElementById('questionText');
+        const answerInput = document.getElementById('answerInput');
+        const questionMeta = document.getElementById('questionMeta');
+        const resultBox = document.getElementById('resultBox');
+        const scoreValue = document.getElementById('scoreValue');
+        const correctnessText = document.getElementById('correctnessText');
+        const userAnswerText = document.getElementById('userAnswerText');
+        const expectedAnswerText = document.getElementById('expectedAnswerText');
+        const explanationText = document.getElementById('explanationText');
+
+        function renderQuestion(index) {
+            const question = questions[index];
+            questionText.textContent = question.question;
+            questionMeta.textContent = `Question ${index + 1} / ${questions.length}`;
+            answerInput.value = '';
+            resultBox.classList.add('d-none');
+        }
+
+        document.getElementById('submitAnswer').addEventListener('click', () => {
+            const answer = answerInput.value.trim();
+            if (!answer) {
+                showToast('Please enter your answer before submitting.', 'warning');
+                return;
+            }
+
+            const question = questions[currentIndex];
+            const isCorrect = answer.toLowerCase().includes(question.topic.toLowerCase()) || answer.length > 40;
+            const score = isCorrect ? 8 : 3;
+            resultBox.classList.remove('d-none');
+            scoreValue.textContent = `${score}/10`;
+            correctnessText.textContent = isCorrect ? 'Correct' : 'Incorrect';
+            correctnessText.className = isCorrect ? 'mb-0 text-success fw-bold' : 'mb-0 text-danger fw-bold';
+            userAnswerText.textContent = answer;
+            expectedAnswerText.textContent = question.answer;
+            explanationText.textContent = question.explanation;
+            showToast('Answer submitted successfully', 'success');
+        });
+
+        document.getElementById('nextQuestion').addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % questions.length;
+            renderQuestion(currentIndex);
+        });
+
+        renderQuestion(currentIndex);
+    </script>
+</body>
+
+</html>
